@@ -1,1 +1,104 @@
-hello world
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CGRAN Beta Site</title>
+
+    <!-- Bootstrap -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">		
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+	
+	<!-- Bootstrap-Table -->
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.6.0/bootstrap-table.min.css">
+	
+	<!-- GNU Radio Style -->
+    <link href="css/gnuradio.css" rel="stylesheet">
+    
+	</head>
+	<body>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#modules">GNU Radio</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+			<ul class="nav navbar-nav navbar-right">
+				<li>
+                    <a href="#services">Home</a>
+                </li>
+				<li>
+                    <a href="#services">Wiki</a>
+                </li>
+                <li>
+                    <a href="#services">Tutorials</a>
+                </li>
+                <li>
+                    <a href="#services">Github</a>
+                </li>
+			</ul>
+        </div><!--/.navbar-collapse -->
+      </div>
+    </nav>
+
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="jumbotron">
+      <div class="container">
+        <h1>CGRAN</h1>
+        <p>This page uses Bootstrap and Bootstrap Tables to create an archive network that is easily accessible. In addition to the table being generated from a remote json file, the tables can also be sorted and searched through with pagination.</p>
+      </div>
+    </div>
+
+
+	<div id="toolbar" class="btn-group">
+		<button type="button" class="btn btn-default">OOT</button>
+		<button type="button" class="btn btn-default">GRC</button>
+		<button type="button" class="btn btn-default">C++</button>
+	</div>
+	
+    <div class="container">
+		<table data-toggle="table" 
+			   data-url="data/data1.json"
+			   data-search="true"
+			   data-show-columns="true"
+			   data-query-params="pagination"
+			   data-pagination="true"
+			   data-height="519"
+			   data-toolbar="#toolbar">
+		<thead>
+			<tr>
+				<th data-field="module_name" data-formatter="links" data-sortable="true">Module Name</th>
+				<th data-field="description">Description</th>
+				<th data-field="type" data-sortable="true" data-sorter="by_name">Type</th>
+			</tr>
+		</thead>
+		</table>
+      <hr>
+
+      <footer>
+        <p>&copy; Company 2015</p>
+      </footer>
+    </div> <!-- /container -->
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    
+    <!-- Bootstrap JS -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+
+	<!-- Bootstrap-Table JS -->
+	<script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.6.0/bootstrap-table.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.6.0/locale/bootstrap-table-en-US.min.js"></script>
+	
+    <!-- GNU Radio JS -->
+    <script src="js/gnuradio.js"></script>
+	</body>
+</html>
